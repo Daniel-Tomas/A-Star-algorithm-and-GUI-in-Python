@@ -11,11 +11,11 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(800, 600)
+        MainWindow.resize(1043, 600)
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.pushButton = QtWidgets.QPushButton(self.centralwidget)
-        self.pushButton.setGeometry(QtCore.QRect(320, 230, 151, 61))
+        self.pushButton.setGeometry(QtCore.QRect(810, 60, 151, 61))
         font = QtGui.QFont()
         font.setFamily("IBM Plex Mono")
         font.setPointSize(12)
@@ -35,6 +35,18 @@ class Ui_MainWindow(object):
         font.setWeight(75)
         self.label_origen.setFont(font)
         self.label_origen.setObjectName("label_origen")
+        self.label_destino = QtWidgets.QLabel(self.centralwidget)
+        self.label_destino.setGeometry(QtCore.QRect(410, 70, 101, 31))
+        font = QtGui.QFont()
+        font.setFamily("IBM Plex Mono")
+        font.setPointSize(12)
+        font.setBold(True)
+        font.setWeight(75)
+        self.label_destino.setFont(font)
+        self.label_destino.setObjectName("label_destino")
+        self.desplegable_destino = QtWidgets.QComboBox(self.centralwidget)
+        self.desplegable_destino.setGeometry(QtCore.QRect(530, 70, 221, 31))
+        self.desplegable_destino.setObjectName("desplegable_destino")
         MainWindow.setCentralWidget(self.centralwidget)
 
         self.retranslateUi(MainWindow)
@@ -45,6 +57,7 @@ class Ui_MainWindow(object):
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
         self.pushButton.setText(_translate("MainWindow", "PushButton"))
         self.label_origen.setText(_translate("MainWindow", "TextLabel"))
+        self.label_destino.setText(_translate("MainWindow", "TextLabel"))
 
 
 if __name__ == "__main__":
