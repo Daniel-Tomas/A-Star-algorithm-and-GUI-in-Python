@@ -42,7 +42,7 @@ class Search:
         sq1 = (coor1[0] - coor2[0]) ** 2
         sq2 = (coor1[1] - coor2[1]) ** 2
         distancia = math.sqrt(sq1 + sq2)
-        return int((distancia*100000)*1.09)
+        return int(distancia * 100000 * 1.025)
 
 
 if __name__ == '__main__':
@@ -51,6 +51,4 @@ if __name__ == '__main__':
     print(path.comunications)
     path.read_coordinates('coordenadas')
     print(path.coordinates)
-    print(path.calc_distance('Kifissia', 'KAT'))
-    print(path.calc_distance('Kifissia', 'Marousi'))
-    print(path.calc_distance('KAT', 'Marousi'))
+    print(path.calc_distance('KAT', 'Aghios Antonios'))
