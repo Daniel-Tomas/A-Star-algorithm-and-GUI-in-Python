@@ -1,6 +1,7 @@
 import math
 from queue import PriorityQueue
 
+
 class Search:
 
     def __init__(self):
@@ -36,13 +37,13 @@ class Search:
             coor.append(longitud)
             self.coordinates[estacion] = coor
 
-    def calc_distance(self, est1, est2):
+    def dist_aerea(self, est1, est2):
         coor1 = self.coordinates.get(est1)
         coor2 = self.coordinates.get(est2)
         sq1 = (coor1[0] - coor2[0]) ** 2
         sq2 = (coor1[1] - coor2[1]) ** 2
         distancia = math.sqrt(sq1 + sq2)
-        return int(distancia * 100000 * 1.025)
+        return distancia * 100 * 1.025
 
     def dist_est(self, origen, destino):
         com = self.comunications.get(origen)
@@ -61,9 +62,14 @@ class Search:
 
 if __name__ == '__main__':
     path = Search()
-    path.read_distances('distancias')
+    path.read_distances('..\datos\distancias')
     print(path.comunications)
-    path.read_coordinates('coordenadas')
+    path.read_coordinates('..\datos\coordenadas')
     camino = ['Piraeus', 'Faliro', 'Moschato', 'Kallithea', 'Tavros']
     print(path.coordinates)
-    print(path.distancia_camino(camino))
+    dist = path.distancia_camino(camino)
+    print(dist)
+    segundos = (dist / 80) * 3600 + 20 * (len(camino) - 1)
+    print(int(segundos / 60))
+    print(segundos % 60)
+    print(path.dist_aerea('Kifissia', 'KAT'))
