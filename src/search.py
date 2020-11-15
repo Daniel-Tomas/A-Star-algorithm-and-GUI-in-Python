@@ -60,8 +60,7 @@ class Search:
         return res
 
     def algorithm_astar(self, origen, destino):
-        visitados = []
-        visitados.append(origen)
+        visitados = [origen]
         opciones = PriorityQueue()
         actual = origen
         while destino not in visitados:
@@ -69,12 +68,11 @@ class Search:
             for i in range(0, len(com), 2):
 
 
-
 if __name__ == '__main__':
     path = Search()
-    path.read_distances('..\datos\distancias')
+    path.read_distances('..\data\distancias')
     print(path.comunications)
-    path.read_coordinates('..\datos\coordenadas')
+    path.read_coordinates('..\data\coordenadas')
     camino = ['Piraeus', 'Faliro', 'Moschato', 'Kallithea', 'Tavros']
     print(path.coordinates)
     dist = path.distancia_camino(camino)
