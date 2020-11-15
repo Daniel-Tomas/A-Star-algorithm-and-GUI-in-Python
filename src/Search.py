@@ -59,6 +59,16 @@ class Search:
             res = res + self.dist_est(origen, destino)
         return res
 
+    def algorithm_astar(self, origen, destino):
+        visitados = []
+        visitados.append(origen)
+        opciones = PriorityQueue()
+        actual = origen
+        while destino not in visitados:
+            com = self.comunications.get(actual)
+            for i in range(0, len(com), 2):
+
+
 
 if __name__ == '__main__':
     path = Search()
