@@ -1,5 +1,5 @@
 import math
-
+from queue import PriorityQueue
 
 class Search:
 
@@ -44,11 +44,26 @@ class Search:
         distancia = math.sqrt(sq1 + sq2)
         return int(distancia * 100000 * 1.025)
 
+    def dist_est(self, origen, destino):
+        com = self.comunications.get(origen)
+        for i in range(0, len(com), 2):
+            if com[i] == destino:
+                return com[i + 1]
+
+    def distancia_camino(self, camino):
+        res = 0
+        for i in range(len(camino) - 1):
+            origen = camino[i]
+            destino = camino[i + 1]
+            res = res + self.dist_est(origen, destino)
+        return res
+
 
 if __name__ == '__main__':
     path = Search()
     path.read_distances('distancias')
     print(path.comunications)
     path.read_coordinates('coordenadas')
+    camino = ['Piraeus', 'Faliro', 'Moschato', 'Kallithea', 'Tavros']
     print(path.coordinates)
-    print(path.calc_distance('KAT', 'Aghios Antonios'))
+    print(path.distancia_camino(camino))
