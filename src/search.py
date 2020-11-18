@@ -1,5 +1,6 @@
 import math
 from queue import PriorityQueue
+import copy
 
 
 class Search:
@@ -7,6 +8,8 @@ class Search:
     def __init__(self):
         self.coordinates = {}
         self.comunications = {}
+        self.read_distances('..\data\distancias')
+        self.read_coordinates('..\data\coordenadas')
 
     def read_distances(self, file):
         f = open(file, 'r')
@@ -60,24 +63,38 @@ class Search:
         return res
 
     def algorithm_astar(self, origen, destino):
-        visitados = [origen]
+        visitados = []
         opciones = PriorityQueue()
+        stations = {}
+        camino = [origen]
+        stations[origen] = camino
+        distancia = {}
+        distancia[origen] = 0
         actual = origen
         while destino not in visitados:
+            if actual in visitados:
+                continue
+            visitados.append(actual)
             com = self.comunications.get(actual)
+            dist_actual = distancia.get(actual)
             for i in range(0, len(com), 2):
+                siguiente = com[i]
+                dist_siguiente = dist_actual + self.dist_est(actual, siguiente) + self.dist_aerea(actual,siguiente)
+                opciones.put((dist_siguiente, siguiente))
+            siguiente = opciones.get()[1]
+            dist_siguiente = distancia.get(actual) + self.dist_est(actual, siguiente)
+            distancia[siguiente] = dist_siguiente
+            cam_siguiente = copy.copy(stations[actual])
+            cam_siguiente.append(siguiente)
+            stations[siguiente] = cam_siguiente
+            actual = siguiente
+        return stations.get(destino)
 
 
 if __name__ == '__main__':
     path = Search()
-    path.read_distances('..\data\distancias')
     print(path.comunications)
-    path.read_coordinates('..\data\coordenadas')
-    camino = ['Piraeus', 'Faliro', 'Moschato', 'Kallithea', 'Tavros']
     print(path.coordinates)
-    dist = path.distancia_camino(camino)
-    print(dist)
-    segundos = (dist / 80) * 3600 + 20 * (len(camino) - 1)
-    print(int(segundos / 60))
-    print(segundos % 60)
-    print(path.dist_aerea('Kifissia', 'KAT'))
+    res = path.algorithm_astar('Piraeus', 'Moschato')
+    print(res)
+    print(path.dist_est('Piraeus', 'Faliro'))
