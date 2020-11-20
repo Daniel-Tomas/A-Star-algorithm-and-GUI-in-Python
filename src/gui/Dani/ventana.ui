@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1200</width>
-    <height>650</height>
+    <width>1100</width>
+    <height>600</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -22,7 +22,7 @@
      <rect>
       <x>0</x>
       <y>0</y>
-      <width>600</width>
+      <width>550</width>
       <height>650</height>
      </rect>
     </property>
@@ -43,9 +43,12 @@
       <rect>
        <x>0</x>
        <y>0</y>
-       <width>600</width>
-       <height>650</height>
+       <width>550</width>
+       <height>600</height>
       </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(205, 236, 255);</string>
      </property>
      <property name="frameShape">
       <enum>QFrame::NoFrame</enum>
@@ -57,10 +60,39 @@
       <pixmap>../../../image/map.png</pixmap>
      </property>
      <property name="scaledContents">
-      <bool>true</bool>
+      <bool>false</bool>
      </property>
      <property name="wordWrap">
       <bool>true</bool>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QFrame" name="der">
+    <property name="geometry">
+     <rect>
+      <x>550</x>
+      <y>0</y>
+      <width>550</width>
+      <height>600</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QWidget" name="fondo" native="true">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>550</width>
+       <height>600</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(205, 236, 255);</string>
      </property>
     </widget>
    </widget>
