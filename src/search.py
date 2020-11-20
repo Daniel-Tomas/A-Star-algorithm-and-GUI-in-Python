@@ -1,6 +1,5 @@
 import math
 from queue import PriorityQueue
-import copy
 
 
 class Search:
@@ -50,51 +49,67 @@ class Search:
 
     def dist_est(self, origen, destino):
         com = self.comunications.get(origen)
+        res = 0
         for i in range(0, len(com), 2):
             if com[i] == destino:
-                return com[i + 1]
+                res = com[i + 1]
+        return res
 
-    def distancia_camino(self, camino):
-        res = 0
+    def coste_camino(self, camino, velocidad):
+        distancia = 0
         for i in range(len(camino) - 1):
             origen = camino[i]
             destino = camino[i + 1]
-            res = res + self.dist_est(origen, destino)
-        return res
+            distancia = distancia + self.dist_est(origen, destino)
+        segundos = (distancia / velocidad) * 3600 + 20 * (len(camino) - 1)
+        minutos = int(segundos / 60)
+        segundos = int(segundos % 60)
+        return distancia, minutos, segundos
 
     def algorithm_astar(self, origen, destino):
-        visitados = []
-        opciones = PriorityQueue()
-        stations = {}
-        camino = [origen]
-        stations[origen] = camino
-        distancia = {}
-        distancia[origen] = 0
-        actual = origen
-        while destino not in visitados:
-            if actual in visitados:
-                continue
-            visitados.append(actual)
-            com = self.comunications.get(actual)
-            dist_actual = distancia.get(actual)
+        frontier = PriorityQueue()
+        frontier.put((origen, 0))
+        came_from = {}
+        came_from[origen] = None
+        cost_so_far = {}
+        cost_so_far[origen] = 0
+        while not frontier.empty():
+            current = frontier.get()[0]
+            if current == destino:
+                break
+            com = self.comunications.get(current)
             for i in range(0, len(com), 2):
-                siguiente = com[i]
-                dist_siguiente = dist_actual + self.dist_est(actual, siguiente) + self.dist_aerea(actual,siguiente)
-                opciones.put((dist_siguiente, siguiente))
-            siguiente = opciones.get()[1]
-            dist_siguiente = distancia.get(actual) + self.dist_est(actual, siguiente)
-            distancia[siguiente] = dist_siguiente
-            cam_siguiente = copy.copy(stations[actual])
-            cam_siguiente.append(siguiente)
-            stations[siguiente] = cam_siguiente
-            actual = siguiente
-        return stations.get(destino)
+                next = com[i]
+                cost_next = com[i + 1]
+                new_cost = cost_so_far[current] + cost_next
+                if next not in cost_so_far or new_cost < cost_so_far[next]:
+                    cost_so_far[next] = new_cost
+                    priority = new_cost + self.dist_aerea(next, destino)
+                    frontier.put((next, priority))
+                    came_from[next] = current
+        return came_from
+
+    def obtain_path(self, came_from, origen, destino):
+        res = []
+        actual = destino
+        while True:
+            res.append(actual)
+            if actual == origen:
+                break
+            actual = came_from.get(actual)
+        res.reverse()
+        return res
 
 
 if __name__ == '__main__':
     path = Search()
     print(path.comunications)
     print(path.coordinates)
-    res = path.algorithm_astar('Piraeus', 'Moschato')
-    print(res)
-    print(path.dist_est('Piraeus', 'Faliro'))
+    origen = 'Kifissia'
+    destino = 'Egaleo'
+    came_from = path.algorithm_astar(origen, destino)
+    camino = path.obtain_path(came_from, origen, destino)
+    distancia, minutos, segundos = path.coste_camino(camino, 85)
+    print(f'Camino a realizar: {camino}')
+    print("Distancia a recorrer:", "{:.2f}".format(distancia), 'km')
+    print(f'Tiempo empleado: {minutos} minutos y {segundos} segundos')
