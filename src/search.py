@@ -61,31 +61,32 @@ class Search:
             origen = camino[i]
             destino = camino[i + 1]
             distancia = distancia + self.dist_est(origen, destino)
-        segundos = (distancia / velocidad) * 3600 + 20 * (len(camino) - 1)
+        distancia *= 1.05
+        segundos = (distancia / velocidad) * 3600 + 20 * (len(camino) - 2)
         minutos = int(segundos / 60)
         segundos = int(segundos % 60)
         return distancia, minutos, segundos
 
     def algorithm_astar(self, origen, destino):
         frontier = PriorityQueue()
-        frontier.put((origen, 0))
+        frontier.put((0, origen))
         came_from = {}
         came_from[origen] = None
         cost_so_far = {}
         cost_so_far[origen] = 0
         while not frontier.empty():
-            current = frontier.get()[0]
+            current = frontier.get()[1]
             if current == destino:
                 break
             com = self.comunications.get(current)
             for i in range(0, len(com), 2):
                 next = com[i]
                 cost_next = com[i + 1]
-                new_cost = cost_so_far[current] + cost_next
+                new_cost = cost_so_far[current] + cost_next + self.dist_aerea(next, destino)
                 if next not in cost_so_far or new_cost < cost_so_far[next]:
                     cost_so_far[next] = new_cost
-                    priority = new_cost + self.dist_aerea(next, destino)
-                    frontier.put((next, priority))
+                    priority = new_cost
+                    frontier.put((priority, next))
                     came_from[next] = current
         return came_from
 
@@ -103,13 +104,12 @@ class Search:
 
 if __name__ == '__main__':
     path = Search()
-    print(path.comunications)
-    print(path.coordinates)
-    origen = 'Kifissia'
-    destino = 'Egaleo'
+    origen = 'Aghios Dimitrios'
+    destino = 'Omonia'
     came_from = path.algorithm_astar(origen, destino)
     camino = path.obtain_path(came_from, origen, destino)
-    distancia, minutos, segundos = path.coste_camino(camino, 85)
+    velocidad = 82.5
+    distancia, minutos, segundos = path.coste_camino(camino, velocidad)
     print(f'Camino a realizar: {camino}')
     print("Distancia a recorrer:", "{:.2f}".format(distancia), 'km')
     print(f'Tiempo empleado: {minutos} minutos y {segundos} segundos')
