@@ -37,6 +37,8 @@ class Search:
             coor.append(latitud)
             longitud = float(palabras[2])
             coor.append(longitud)
+            linea = int(palabras[3])
+            coor.append(linea)
             self.coordinates[estacion] = coor
 
     def dist_aerea(self, est1, est2):
@@ -45,6 +47,8 @@ class Search:
         sq1 = (coor1[0] - coor2[0]) ** 2
         sq2 = (coor1[1] - coor2[1]) ** 2
         distancia = math.sqrt(sq1 + sq2)
+        if coor1[2] != coor2[2]:
+            distancia += 30
         return distancia * 100 * 1.025
 
     def dist_est(self, origen, destino):
@@ -62,7 +66,7 @@ class Search:
             destino = camino[i + 1]
             distancia = distancia + self.dist_est(origen, destino)
         distancia *= 1.05
-        segundos = (distancia / velocidad) * 3600 + 20 * (len(camino) - 2)
+        segundos = (distancia / velocidad) * 3600 + 70 * (len(camino) - 1)
         minutos = int(segundos / 60)
         segundos = int(segundos % 60)
         return distancia, minutos, segundos
@@ -104,8 +108,8 @@ class Search:
 
 if __name__ == '__main__':
     path = Search()
-    origen = 'Aghios Dimitrios'
-    destino = 'Omonia'
+    origen = 'Piraeus'
+    destino = 'Dafni'
     came_from = path.algorithm_astar(origen, destino)
     camino = path.obtain_path(came_from, origen, destino)
     velocidad = 82.5
