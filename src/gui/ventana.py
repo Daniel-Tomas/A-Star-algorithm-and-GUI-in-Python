@@ -1,4 +1,4 @@
-from src.gui.ventana_ui import *
+from src.GUI.ventana_ui import *
 
 
 class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
