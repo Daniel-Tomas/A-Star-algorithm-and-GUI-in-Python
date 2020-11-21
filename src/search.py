@@ -65,8 +65,8 @@ class Search:
             origen = camino[i]
             destino = camino[i + 1]
             distancia = distancia + self.dist_est(origen, destino)
-        distancia *= 1.05
-        segundos = (distancia / velocidad) * 3600 + 100 * (len(camino) - 1)
+        distancia *= 1.005
+        segundos = (distancia / velocidad) * 3600 + 95 * (len(camino) - 1)
         minutos = int(segundos / 60)
         segundos = int(segundos % 60)
         return distancia, minutos, segundos
@@ -109,7 +109,7 @@ class Search:
 if __name__ == '__main__':
     path = Search()
     origen = 'Piraeus'
-    destino = 'Dafni'
+    destino = 'KAT'
     came_from = path.algorithm_astar(origen, destino)
     camino = path.obtain_path(came_from, origen, destino)
     velocidad = 82.5
