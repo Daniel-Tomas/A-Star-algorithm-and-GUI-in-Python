@@ -66,7 +66,7 @@ class Search:
             destino = camino[i + 1]
             distancia = distancia + self.dist_est(origen, destino)
         distancia *= 1.05
-        segundos = (distancia / velocidad) * 3600 + 70 * (len(camino) - 1)
+        segundos = (distancia / velocidad) * 3600 + 100 * (len(camino) - 1)
         minutos = int(segundos / 60)
         segundos = int(segundos % 60)
         return distancia, minutos, segundos
