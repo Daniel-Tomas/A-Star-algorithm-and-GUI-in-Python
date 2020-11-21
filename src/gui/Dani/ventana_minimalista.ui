@@ -257,7 +257,7 @@
       <rect>
        <x>30</x>
        <y>150</y>
-       <width>141</width>
+       <width>131</width>
        <height>20</height>
       </rect>
      </property>
@@ -284,10 +284,70 @@
       <enum>QFrame::NoFrame</enum>
      </property>
     </widget>
+    <widget class="QLabel" name="distances_value">
+     <property name="geometry">
+      <rect>
+       <x>180</x>
+       <y>60</y>
+       <width>100</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Calibri</family>
+       <pointsize>22</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLabel" name="time_value">
+     <property name="geometry">
+      <rect>
+       <x>180</x>
+       <y>100</y>
+       <width>100</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Calibri</family>
+       <pointsize>22</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLabel" name="stations_value">
+     <property name="geometry">
+      <rect>
+       <x>180</x>
+       <y>150</y>
+       <width>100</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Calibri</family>
+       <pointsize>22</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
     <zorder>background_list</zorder>
     <zorder>time</zorder>
     <zorder>distances</zorder>
     <zorder>stations</zorder>
+    <zorder>distances_value</zorder>
+    <zorder>time_value</zorder>
+    <zorder>stations_value</zorder>
    </widget>
    <zorder>results_container</zorder>
    <zorder>image_container</zorder>
