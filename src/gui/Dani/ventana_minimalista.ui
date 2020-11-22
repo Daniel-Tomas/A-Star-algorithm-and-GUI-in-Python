@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1409</width>
+    <width>1302</width>
     <height>821</height>
    </rect>
   </property>
@@ -99,20 +99,15 @@
       </property>
       <property name="font">
        <font>
-        <family>Calibri</family>
-        <pointsize>12</pointsize>
+        <family>Trebuchet MS</family>
+        <pointsize>13</pointsize>
+        <weight>50</weight>
+        <bold>false</bold>
        </font>
       </property>
-      <item>
-       <property name="text">
-        <string>Seleccione Origen</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>A</string>
-       </property>
-      </item>
+      <property name="editable">
+       <bool>false</bool>
+      </property>
      </widget>
      <widget class="QComboBox" name="destiny_comboBox">
       <property name="geometry">
@@ -125,23 +120,15 @@
       </property>
       <property name="font">
        <font>
-        <family>Calibri</family>
-        <pointsize>12</pointsize>
+        <family>Trebuchet MS</family>
+        <pointsize>13</pointsize>
+        <weight>50</weight>
+        <bold>false</bold>
        </font>
       </property>
       <property name="currentText">
-       <string>Seleccione Destino</string>
+       <string/>
       </property>
-      <item>
-       <property name="text">
-        <string>Seleccione Destino</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>B</string>
-       </property>
-      </item>
      </widget>
      <widget class="QLabel" name="destiny_icon">
       <property name="geometry">
@@ -218,14 +205,14 @@
      <property name="geometry">
       <rect>
        <x>30</x>
-       <y>100</y>
-       <width>101</width>
-       <height>31</height>
+       <y>92</y>
+       <width>111</width>
+       <height>41</height>
       </rect>
      </property>
      <property name="font">
       <font>
-       <family>Calibri</family>
+       <family>Trebuchet MS</family>
        <pointsize>22</pointsize>
       </font>
      </property>
@@ -237,14 +224,14 @@
      <property name="geometry">
       <rect>
        <x>30</x>
-       <y>60</y>
-       <width>131</width>
-       <height>20</height>
+       <y>59</y>
+       <width>141</width>
+       <height>21</height>
       </rect>
      </property>
      <property name="font">
       <font>
-       <family>Calibri</family>
+       <family>Trebuchet MS</family>
        <pointsize>22</pointsize>
       </font>
      </property>
@@ -256,14 +243,14 @@
      <property name="geometry">
       <rect>
        <x>30</x>
-       <y>150</y>
-       <width>131</width>
-       <height>20</height>
+       <y>139</y>
+       <width>151</width>
+       <height>31</height>
       </rect>
      </property>
      <property name="font">
       <font>
-       <family>Calibri</family>
+       <family>Trebuchet MS</family>
        <pointsize>22</pointsize>
       </font>
      </property>
