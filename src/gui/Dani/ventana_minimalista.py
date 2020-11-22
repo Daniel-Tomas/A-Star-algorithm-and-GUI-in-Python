@@ -7,8 +7,6 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         QtWidgets.QMainWindow.__init__(self, *args, **kwargs)
         self.setupUi(self)
 
-        self.setWindowTitle("Athens Metro")
-
         self.predetermined_text_origin_comboBox = 'Seleccione Origen'
         self.predetermined_text_destiny_comboBox = 'Seleccione Destino'
 
