@@ -108,7 +108,7 @@ class Search:
 
 if __name__ == '__main__':
     path = Search()
-    origen = 'Piraeus'
+    origen = 'Evangelismos'
     destino = 'KAT'
     came_from = path.algorithm_astar(origen, destino)
     camino = path.obtain_path(came_from, origen, destino)
