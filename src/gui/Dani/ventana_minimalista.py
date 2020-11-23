@@ -1,6 +1,7 @@
-from src.gui.Dani.ventana_minimalista_ui import *
+from src.GUI.Dani.ventana_minimalista_ui import *
 from src.search import Search
-from src.gui.Dani import about_ui, help_ui
+from src.GUI.Dani import about_ui, help_ui
+
 
 class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
     def __init__(self, *args, **kwargs):
@@ -10,7 +11,9 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         self.predetermined_text_origin_comboBox = 'Seleccione Origen'
         self.predetermined_text_destiny_comboBox = 'Seleccione Destino'
 
-        # self.fill_comboBoxes()
+        self.fill_comboBoxes()
+
+        self.map_image.setVisible(False)
 
         # Menu bar
         self.menu_help = QtWidgets.QAction("Help")
@@ -21,7 +24,6 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
 
         self.menu_help.triggered.connect(self.to_help)
         self.menu_about.triggered.connect(self.to_about)
-
 
         # self.pushButton.setText("Go!")
         # self.label_origen.setText("Origen")
