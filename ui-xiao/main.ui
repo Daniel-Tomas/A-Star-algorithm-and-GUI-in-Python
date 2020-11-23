@@ -201,6 +201,20 @@
          </property>
          <item>
           <property name="text">
+           <string>morado</string>
+          </property>
+          <property name="icon">
+           <iconset>
+            <normaloff>../image/circle_green.png</normaloff>../image/circle_green.png</iconset>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Nuevo elemento</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
            <string>Parada azul</string>
           </property>
           <property name="icon">
@@ -280,8 +294,7 @@
           </property>
           <property name="icon">
            <iconset>
-            <activeon>../image/line_blue.png</activeon>
-           </iconset>
+            <normaloff>../image/circle.png</normaloff>../image/circle.png</iconset>
           </property>
          </item>
          <item>
