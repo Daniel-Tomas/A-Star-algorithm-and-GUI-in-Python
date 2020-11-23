@@ -709,7 +709,7 @@
        <bool>true</bool>
       </property>
      </widget>
-     <widget class="QLabel" name="i_PAttiki">
+     <widget class="QLabel" name="i_Attiki">
       <property name="geometry">
        <rect>
         <x>382</x>
@@ -1092,7 +1092,7 @@
      <widget class="QLabel" name="i_Airport">
       <property name="geometry">
        <rect>
-        <x>1099</x>
+        <x>1098</x>
         <y>694</y>
         <width>11</width>
         <height>11</height>
@@ -1234,7 +1234,7 @@
      <property name="geometry">
       <rect>
        <x>20</x>
-       <y>30</y>
+       <y>9</y>
        <width>301</width>
        <height>191</height>
       </rect>
@@ -1247,7 +1247,7 @@
           <property name="font">
            <font>
             <family>Trebuchet MS</family>
-            <pointsize>22</pointsize>
+            <pointsize>20</pointsize>
            </font>
           </property>
           <property name="text">
@@ -1260,7 +1260,7 @@
           <property name="font">
            <font>
             <family>Trebuchet MS</family>
-            <pointsize>22</pointsize>
+            <pointsize>20</pointsize>
            </font>
           </property>
           <property name="text">
@@ -1273,11 +1273,11 @@
           <property name="font">
            <font>
             <family>Trebuchet MS</family>
-            <pointsize>22</pointsize>
+            <pointsize>20</pointsize>
            </font>
           </property>
           <property name="text">
-           <string>Distancias:</string>
+           <string>Distancia:</string>
           </property>
          </widget>
         </item>
@@ -1290,7 +1290,7 @@
           <property name="font">
            <font>
             <family>Trebuchet MS</family>
-            <pointsize>22</pointsize>
+            <pointsize>20</pointsize>
            </font>
           </property>
           <property name="text">
@@ -1303,7 +1303,7 @@
           <property name="font">
            <font>
             <family>Trebuchet MS</family>
-            <pointsize>22</pointsize>
+            <pointsize>20</pointsize>
            </font>
           </property>
           <property name="toolTipDuration">
@@ -1319,7 +1319,7 @@
           <property name="font">
            <font>
             <family>Trebuchet MS</family>
-            <pointsize>22</pointsize>
+            <pointsize>20</pointsize>
            </font>
           </property>
           <property name="text">

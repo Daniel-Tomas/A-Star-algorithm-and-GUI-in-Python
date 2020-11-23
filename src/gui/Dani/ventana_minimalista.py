@@ -13,37 +13,7 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
 
         self.fill_comboBoxes()
 
-        # self.map_image.setVisible(False)
-
-        # Route icons
-        '''
-        self.i_Aghios_Antonios.setVisible(True)
-        self.i_Sepolia.setVisible(True)
-        '''
-
-        # self.frame_paradas.setVisible(False)
-        print(self.i_KAT.objectName())
-
-        paradas = ['Evangelismos', 'Syntagma', 'Monastiraki', 'Omonia', 'Victoria', 'Attikki', 'Aghios Nikolaos',
-                   'Kato Patisia', 'Aghios Eleftherio', 'Ano Patisia', 'Perissos', 'Pefkakia', 'Nea Ionia', 'Iraklio',
-                   'Irini', 'Neratziotissa', 'Marousi', 'KAT', 'i_KAT', 'i_Maroussi', 'i_Kifissia']
-
-        i_paradas = self.frame_paradas.children()
-
-        for i in i_paradas:
-            if i.objectName() in paradas:
-                i.setVisible(True)
-
-        for i in i_paradas:
-            if i.objectName() in paradas:
-                i.setVisible(True)
-
-
-        '''
-        self.i_KAT.setVisible(True)
-        self.i_Maroussi.setVisible(True)
-        self.i_Neratziotissa.setVisible(True)
-        '''
+        self.make_stations_invisible()
 
         # Menu bar
         self.menu_help = QtWidgets.QAction("Help")
@@ -80,15 +50,12 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         self.origin_comboBox.addItem(self.predetermined_text_origin_comboBox)
         self.destiny_comboBox.addItem(self.predetermined_text_destiny_comboBox)
 
-        # self.origin_comboBox.addItem(icon_circle_green,"adios")
-        # self.origin_comboBox.addItem(icon_circle_green,str)
-
         with open('../../../data/coordenadas') as file:
             for linea in file:
                 palabras = linea.split(",")
                 estacion = palabras[0]
                 linea = int(palabras[3])
-                if estacion in ['Attikki', 'Omonia', 'Monastiraki', 'Syntagma']:
+                if estacion in ['Attiki', 'Omonia', 'Monastiraki', 'Syntagma']:
                     self.origin_comboBox.addItem(icon_circle_yellow, estacion)
                     self.destiny_comboBox.addItem(icon_circle_yellow, estacion)
                 elif linea == 1:
@@ -109,15 +76,28 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         destiny = self.destiny_comboBox.currentText()
         if origin != self.predetermined_text_origin_comboBox \
                 and destiny != self.predetermined_text_destiny_comboBox:
-            print("hola")
-            path = Search()
-            print("Hola2")
-            came_from = path.algorithm_astar(origin, destiny)
-            camino = path.obtain_path(came_from, origin, destiny)
-            velocidad = 82.5
-            distancia, minutos, segundos = path.coste_camino(camino, velocidad)
-            print(camino)
-            self.set_text()
+            functionality = Search()
+            came_from = functionality.algorithm_astar(origin, destiny)
+            path = functionality.obtain_path(came_from, origin, destiny)
+
+            speed = 82.5
+            distance, minutes, seconds = functionality.coste_camino(path, speed)
+            stations_number = len(path)
+            self.set_text(minutes, seconds, stations_number, distance)
+
+            self.print_route(path)
+
+    def make_stations_invisible(self):
+        for i in self.frame_paradas.children():
+            i.setVisible(False)
+
+    def print_route(self, path):
+        self.make_stations_invisible()
+        path = [f"i_{station.replace(' ', '_')}" for station in path]
+        i_paradas = self.frame_paradas.children()
+        for i in i_paradas:
+            if i.objectName() in path:
+                i.setVisible(True)
 
     def menu_bar(self):
         connect_us = self.actionUs
@@ -137,13 +117,10 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         he_ui.setupUi(self.help_window)
         self.help_window.show()
 
-    def set_text(self):
-        time = "10:30"
-        stations = 10
-        distance = 17.15
-        self.time_value.setText(time)
-        self.stations_value.setText(str(stations))
-        self.distances_value.setText(str(distance) + " km")
+    def set_text(self, minutes, seconds, stations_number, distance):
+        self.time_value.setText(f'{minutes} min. {seconds} s.')
+        self.stations_value.setText(str(stations_number))
+        self.distances_value.setText(f'{distance:.2f} Km')
 
 
 if __name__ == "__main__":

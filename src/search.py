@@ -7,8 +7,8 @@ class Search:
     def __init__(self):
         self.coordinates = {}
         self.comunications = {}
-        self.read_distances('../data/distancias')
-        self.read_coordinates('../data/coordenadas')
+        self.read_distances('../../../data/distancias')
+        self.read_coordinates('../../../data/coordenadas')
 
     def read_distances(self, file):
         f = open(file, 'r')
