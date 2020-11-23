@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Help_Window</class>
+ <widget class="QMainWindow" name="Help_Window">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>573</width>
+    <height>457</height>
+   </rect>
+  </property>
+  <property name="font">
+   <font>
+    <family>Trebuchet MS</family>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>Help</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>../../../image/1200px-Athens_Metro_Logo.svg.png</normaloff>../../../image/1200px-Athens_Metro_Logo.svg.png</iconset>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QWidget" name="verticalLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>20</y>
+      <width>501</width>
+      <height>381</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="pasos">
+     <item>
+      <widget class="QLabel" name="HelpWindow">
+       <property name="font">
+        <font>
+         <family>Trebuchet MS</family>
+         <pointsize>22</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>Pasos:</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <item>
+        <widget class="QLabel" name="paso_1">
+         <property name="font">
+          <font>
+           <family>Trebuchet MS</family>
+           <pointsize>22</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>1. Aaron compila</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="paso_2">
+         <property name="font">
+          <font>
+           <family>Trebuchet MS</family>
+           <pointsize>22</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>2. Aaron ejecuta</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="paso_3">
+         <property name="font">
+          <font>
+           <family>Trebuchet MS</family>
+           <pointsize>22</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>3. Aaron la lia</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="paso_4">
+         <property name="font">
+          <font>
+           <family>Trebuchet MS</family>
+           <pointsize>22</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>4. Aaron hace push</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="paso_5">
+         <property name="font">
+          <font>
+           <family>Trebuchet MS</family>
+           <pointsize>22</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>5. Aaron la lia en git</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="paso_6">
+         <property name="font">
+          <font>
+           <family>Trebuchet MS</family>
+           <pointsize>22</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>6. Aaron lia el proyecyo</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="paso_7">
+         <property name="font">
+          <font>
+           <family>Trebuchet MS</family>
+           <pointsize>22</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>7. Aaron es un liante</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>573</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

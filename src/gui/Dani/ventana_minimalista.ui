@@ -6,12 +6,36 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1409</width>
-    <height>821</height>
+    <width>1412</width>
+    <height>843</height>
    </rect>
   </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>1412</width>
+    <height>843</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>1412</width>
+    <height>843</height>
+   </size>
+  </property>
+  <property name="font">
+   <font>
+    <family>Trebuchet MS</family>
+    <pointsize>10</pointsize>
+   </font>
+  </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>Metro Atenas</string>
   </property>
   <property name="windowIcon">
    <iconset>
@@ -51,6 +75,12 @@
        <height>821</height>
       </rect>
      </property>
+     <property name="font">
+      <font>
+       <family>Trebuchet MS</family>
+       <pointsize>11</pointsize>
+      </font>
+     </property>
      <property name="styleSheet">
       <string notr="true">background-color: rgb(205, 236, 255);</string>
      </property>
@@ -78,9 +108,14 @@
       <rect>
        <x>740</x>
        <y>0</y>
-       <width>281</width>
+       <width>301</width>
        <height>181</height>
       </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Trebuchet MS</family>
+      </font>
      </property>
      <property name="frameShape">
       <enum>QFrame::NoFrame</enum>
@@ -93,55 +128,35 @@
        <rect>
         <x>90</x>
         <y>60</y>
-        <width>191</width>
+        <width>211</width>
         <height>31</height>
        </rect>
       </property>
       <property name="font">
        <font>
-        <family>Calibri</family>
-        <pointsize>12</pointsize>
+        <family>Trebuchet MS</family>
+        <pointsize>13</pointsize>
        </font>
       </property>
-      <item>
-       <property name="text">
-        <string>Seleccione Origen</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>A</string>
-       </property>
-      </item>
      </widget>
      <widget class="QComboBox" name="destiny_comboBox">
       <property name="geometry">
        <rect>
         <x>90</x>
         <y>150</y>
-        <width>191</width>
+        <width>211</width>
         <height>31</height>
        </rect>
       </property>
       <property name="font">
        <font>
-        <family>Calibri</family>
-        <pointsize>12</pointsize>
+        <family>Trebuchet MS</family>
+        <pointsize>13</pointsize>
        </font>
       </property>
       <property name="currentText">
-       <string>Seleccione Destino</string>
+       <string/>
       </property>
-      <item>
-       <property name="text">
-        <string>Seleccione Destino</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>B</string>
-       </property>
-      </item>
      </widget>
      <widget class="QLabel" name="destiny_icon">
       <property name="geometry">
@@ -185,6 +200,32 @@
       </property>
      </widget>
     </widget>
+    <widget class="QRadioButton" name="radioButton">
+     <property name="geometry">
+      <rect>
+       <x>483</x>
+       <y>146</y>
+       <width>91</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>RadioButton</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label">
+     <property name="geometry">
+      <rect>
+       <x>320</x>
+       <y>200</y>
+       <width>51</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>TextLabel</string>
+     </property>
+    </widget>
    </widget>
    <widget class="QListView" name="stations_list">
     <property name="geometry">
@@ -192,7 +233,7 @@
       <x>1070</x>
       <y>240</y>
       <width>341</width>
-      <height>591</height>
+      <height>581</height>
      </rect>
     </property>
     <property name="frameShape">
@@ -214,63 +255,6 @@
     <property name="frameShadow">
      <enum>QFrame::Raised</enum>
     </property>
-    <widget class="QLabel" name="time">
-     <property name="geometry">
-      <rect>
-       <x>30</x>
-       <y>100</y>
-       <width>101</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>Calibri</family>
-       <pointsize>22</pointsize>
-      </font>
-     </property>
-     <property name="text">
-      <string>Tiempo:</string>
-     </property>
-    </widget>
-    <widget class="QLabel" name="distances">
-     <property name="geometry">
-      <rect>
-       <x>30</x>
-       <y>60</y>
-       <width>131</width>
-       <height>20</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>Calibri</family>
-       <pointsize>22</pointsize>
-      </font>
-     </property>
-     <property name="text">
-      <string>Distancias:</string>
-     </property>
-    </widget>
-    <widget class="QLabel" name="stations">
-     <property name="geometry">
-      <rect>
-       <x>30</x>
-       <y>150</y>
-       <width>131</width>
-       <height>20</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>Calibri</family>
-       <pointsize>22</pointsize>
-      </font>
-     </property>
-     <property name="text">
-      <string>Estaciones:</string>
-     </property>
-    </widget>
     <widget class="QListView" name="background_list">
      <property name="geometry">
       <rect>
@@ -284,75 +268,148 @@
       <enum>QFrame::NoFrame</enum>
      </property>
     </widget>
-    <widget class="QLabel" name="distances_value">
+    <widget class="QWidget" name="horizontalLayoutWidget">
      <property name="geometry">
       <rect>
-       <x>180</x>
-       <y>60</y>
-       <width>100</width>
-       <height>20</height>
+       <x>20</x>
+       <y>30</y>
+       <width>301</width>
+       <height>191</height>
       </rect>
      </property>
-     <property name="font">
-      <font>
-       <family>Calibri</family>
-       <pointsize>22</pointsize>
-      </font>
-     </property>
-     <property name="text">
-      <string/>
-     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout">
+        <item>
+         <widget class="QLabel" name="time">
+          <property name="font">
+           <font>
+            <family>Trebuchet MS</family>
+            <pointsize>22</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>Tiempo:</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="stations">
+          <property name="font">
+           <font>
+            <family>Trebuchet MS</family>
+            <pointsize>22</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>Estaciones:</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="distances">
+          <property name="font">
+           <font>
+            <family>Trebuchet MS</family>
+            <pointsize>22</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>Distancias:</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout_2">
+        <item>
+         <widget class="QLabel" name="time_value">
+          <property name="font">
+           <font>
+            <family>Trebuchet MS</family>
+            <pointsize>22</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="stations_value">
+          <property name="font">
+           <font>
+            <family>Trebuchet MS</family>
+            <pointsize>22</pointsize>
+           </font>
+          </property>
+          <property name="toolTipDuration">
+           <number>-2</number>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="distances_value">
+          <property name="font">
+           <font>
+            <family>Trebuchet MS</family>
+            <pointsize>22</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
     </widget>
-    <widget class="QLabel" name="time_value">
-     <property name="geometry">
-      <rect>
-       <x>180</x>
-       <y>100</y>
-       <width>100</width>
-       <height>20</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>Calibri</family>
-       <pointsize>22</pointsize>
-      </font>
-     </property>
-     <property name="text">
-      <string/>
-     </property>
-    </widget>
-    <widget class="QLabel" name="stations_value">
-     <property name="geometry">
-      <rect>
-       <x>180</x>
-       <y>150</y>
-       <width>100</width>
-       <height>20</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>Calibri</family>
-       <pointsize>22</pointsize>
-      </font>
-     </property>
-     <property name="text">
-      <string/>
-     </property>
-    </widget>
-    <zorder>background_list</zorder>
-    <zorder>time</zorder>
-    <zorder>distances</zorder>
-    <zorder>stations</zorder>
-    <zorder>distances_value</zorder>
-    <zorder>time_value</zorder>
-    <zorder>stations_value</zorder>
    </widget>
    <zorder>results_container</zorder>
    <zorder>image_container</zorder>
    <zorder>stations_list</zorder>
   </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1412</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <action name="actionHelp">
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Help</string>
+   </property>
+   <property name="font">
+    <font>
+     <family>Trebuchet MS</family>
+    </font>
+   </property>
+   <property name="shortcut">
+    <string/>
+   </property>
+  </action>
+  <action name="action">
+   <property name="text">
+    <string>Us</string>
+   </property>
+   <property name="font">
+    <font>
+     <family>Trebuchet MS</family>
+    </font>
+   </property>
+  </action>
  </widget>
  <resources/>
  <connections/>
