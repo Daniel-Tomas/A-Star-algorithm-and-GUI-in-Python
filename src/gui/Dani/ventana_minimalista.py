@@ -13,7 +13,37 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
 
         self.fill_comboBoxes()
 
-        self.map_image.setVisible(False)
+        # self.map_image.setVisible(False)
+
+        # Route icons
+        '''
+        self.i_Aghios_Antonios.setVisible(True)
+        self.i_Sepolia.setVisible(True)
+        '''
+
+        # self.frame_paradas.setVisible(False)
+        print(self.i_KAT.objectName())
+
+        paradas = ['Evangelismos', 'Syntagma', 'Monastiraki', 'Omonia', 'Victoria', 'Attikki', 'Aghios Nikolaos',
+                   'Kato Patisia', 'Aghios Eleftherio', 'Ano Patisia', 'Perissos', 'Pefkakia', 'Nea Ionia', 'Iraklio',
+                   'Irini', 'Neratziotissa', 'Marousi', 'KAT', 'i_KAT', 'i_Maroussi', 'i_Kifissia']
+
+        i_paradas = self.frame_paradas.children()
+
+        for i in i_paradas:
+            if i.objectName() in paradas:
+                i.setVisible(True)
+
+        for i in i_paradas:
+            if i.objectName() in paradas:
+                i.setVisible(True)
+
+
+        '''
+        self.i_KAT.setVisible(True)
+        self.i_Maroussi.setVisible(True)
+        self.i_Neratziotissa.setVisible(True)
+        '''
 
         # Menu bar
         self.menu_help = QtWidgets.QAction("Help")
