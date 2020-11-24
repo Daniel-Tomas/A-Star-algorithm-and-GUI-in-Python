@@ -25,6 +25,56 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         self.menu_help.triggered.connect(self.to_help)
         self.menu_about.triggered.connect(self.to_about)
 
+        # List result
+
+        # No edition
+        self.stations_list.setEditTriggers(QtWidgets.QAbstractItemView.NoEditTriggers)
+        self.stations_list.setDragDropOverwriteMode(False)
+        self.stations_list.setSelectionMode(False)
+        # self.stations_list.setSelectionBehavior(QtWidgets.QAbstractItemView.SelectRows)
+        # self.stations_list.setSelectionBehavior(QtWidgets.QAbstractItemView.SelectColumns)
+
+        # Establecer el número de filas
+        self.stations_list.setRowCount(50)
+
+        names = ['KAT', 'KAT2', 'KAT3', 'KAT4', 'KAT5', 'KAT6', 'KAT7', 'KAT2', 'KAT3', 'KAT4', 'KAT5', 'KAT6', 'KAT7',
+                 'KAT2', 'KAT3', 'KAT4', 'KAT5', 'KAT6', 'KAT7', 'KAT2', 'KAT3', 'KAT4', 'KAT5', 'KAT6', 'KAT7', 'KAT2',
+                 'KAT3', 'KAT4', 'KAT5', 'KAT6', 'KAT7', 'KAT2', 'KAT3', 'KAT4', 'KAT5', 'KAT6', 'KAT7', 'KAT2', 'KAT3',
+                 'KAT4', 'KAT5', 'KAT6', 'KAT7', 'KAT2', 'KAT3', 'KAT4', 'KAT5', 'KAT6', 'KAT7', 'KAT2', 'KAT3', 'KAT4',
+                 'KAT5', 'KAT6', 'KAT7', 'KAT2', 'KAT3', 'KAT4', 'KAT5', 'KAT6', 'KAT7', 'KAT2', 'KAT3', 'KAT4', 'KAT5',
+                 'KAT6', 'KAT7', 'KAT2', 'KAT3', 'KAT4', 'KAT5', 'KAT6', 'KAT7', 'KAT2', 'KAT3', 'KAT4', 'KAT5', 'KAT6',
+                 'KAT7']
+        cont = 1
+        cont2 = 0
+        for i in names:
+            num = QtWidgets.QTableWidgetItem(str(cont))
+            num.setTextAlignment(4)
+            parada = QtWidgets.QTableWidgetItem(i)
+            parada.setTextAlignment(4)
+            self.stations_list.setItem(cont2, 0, num)
+            self.stations_list.setItem(cont2, 1, parada)
+            cont += 1
+            cont2 += 1
+
+        # Limpiar la table
+        # self.stations_list.clear()
+
+        '''
+        nombre_columnas = ("Numero", "Parada")
+        self.header = QtWidgets.QHeaderView()
+        self.stations_list.setHorizontalHeader(self.header)
+        # self.stations_list.setHorizontalHeader()
+        
+        self.numero = QtWidgets.QAction("Numero")
+        self.parada = QtWidgets.QAction("Parada")
+
+        self.stations_list.addAction(self.numero)
+        self.stations_list.addAction(self.parada)
+
+        self.numero.setVisible(False)
+        self.parada.setVisible(False)
+        '''
+
         # self.pushButton.setText("Go!")
         # self.label_origen.setText("Origen")
         # self.label_destino.setText("Destino")
