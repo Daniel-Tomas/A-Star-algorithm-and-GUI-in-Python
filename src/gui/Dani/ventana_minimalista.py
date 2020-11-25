@@ -13,6 +13,8 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
 
         self.fill_comboBoxes()
 
+        self.no_edition_table()
+
         self.make_stations_invisible()
 
         # Menu bar
@@ -27,13 +29,18 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
 
         # List result
 
+        '''
+        self.no_edition_table()
         # No edition
         self.stations_list.setEditTriggers(QtWidgets.QAbstractItemView.NoEditTriggers)
         self.stations_list.setDragDropOverwriteMode(False)
         self.stations_list.setSelectionMode(False)
         # self.stations_list.setSelectionBehavior(QtWidgets.QAbstractItemView.SelectRows)
         # self.stations_list.setSelectionBehavior(QtWidgets.QAbstractItemView.SelectColumns)
+        '''
 
+        '''
+        self.print_list(path)
         # Establecer el número de filas
         self.stations_list.setRowCount(50)
 
@@ -55,6 +62,7 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
             self.stations_list.setItem(cont2, 1, parada)
             cont += 1
             cont2 += 1
+        '''
 
         # Limpiar la table
         # self.stations_list.clear()
@@ -135,11 +143,41 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
             stations_number = len(path)
             self.set_text(minutes, seconds, stations_number, distance)
 
+            # Path
+            self.clear_list()
+            self.print_list(path)
             self.print_route(path)
 
     def make_stations_invisible(self):
         for i in self.frame_paradas.children():
             i.setVisible(False)
+
+    def print_list(self, path):
+        self.stations_list.setRowCount(len(path))
+        cont = 1
+        cont2 = 0
+        for i in path:
+            num = QtWidgets.QTableWidgetItem(str(cont))
+            num.setTextAlignment(4)
+            parada = QtWidgets.QTableWidgetItem(i)
+            parada.setTextAlignment(4)
+            self.stations_list.setItem(cont2, 0, num)
+            self.stations_list.setItem(cont2, 1, parada)
+            cont += 1
+            cont2 += 1
+
+
+    def clear_list(self):
+        self.stations_list.clearContents()
+        self.stations_list.setRowCount(1)
+
+
+    def no_edition_table(self):
+        self.stations_list.setEditTriggers(QtWidgets.QAbstractItemView.NoEditTriggers)
+        self.stations_list.setDragDropOverwriteMode(False)
+        self.stations_list.setSelectionMode(False)
+        self.stations_list.horizontalHeader().setStretchLastSection(True)
+
 
     def print_route(self, path):
         self.make_stations_invisible()
@@ -149,11 +187,13 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
             if i.objectName() in path:
                 i.setVisible(True)
 
+
     def menu_bar(self):
         connect_us = self.actionUs
         connect_us.triggered.connect(self.to_about)
         connect_help = self.actionHelp
         connect_help.triggered.connect(self.to_help)
+
 
     def to_about(self):
         self.ab_window = about_ui.QtWidgets.QMainWindow()
@@ -161,11 +201,13 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         ab_ui.setupUi(self.ab_window)
         self.ab_window.show()
 
+
     def to_help(self):
         self.help_window = help_ui.QtWidgets.QMainWindow()
         he_ui = help_ui.Ui_Help_Window()
         he_ui.setupUi(self.help_window)
         self.help_window.show()
+
 
     def set_text(self, minutes, seconds, stations_number, distance):
         self.time_value.setText(f'{minutes} min. {seconds} s.')

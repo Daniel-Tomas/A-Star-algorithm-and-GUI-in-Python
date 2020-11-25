@@ -1322,14 +1322,14 @@
    <widget class="QFrame" name="lista_container">
     <property name="geometry">
      <rect>
-      <x>1070</x>
+      <x>1090</x>
       <y>240</y>
-      <width>341</width>
-      <height>581</height>
+      <width>320</width>
+      <height>580</height>
      </rect>
     </property>
     <property name="frameShape">
-     <enum>QFrame::StyledPanel</enum>
+     <enum>QFrame::NoFrame</enum>
     </property>
     <property name="frameShadow">
      <enum>QFrame::Sunken</enum>
@@ -1343,10 +1343,10 @@
     <widget class="QTableWidget" name="stations_list">
      <property name="geometry">
       <rect>
-       <x>1</x>
-       <y>1</y>
-       <width>339</width>
-       <height>579</height>
+       <x>0</x>
+       <y>0</y>
+       <width>321</width>
+       <height>581</height>
       </rect>
      </property>
      <property name="font">
@@ -1450,46 +1450,6 @@
        <string>10</string>
       </property>
      </row>
-     <row>
-      <property name="text">
-       <string>11</string>
-      </property>
-     </row>
-     <row>
-      <property name="text">
-       <string>12</string>
-      </property>
-     </row>
-     <row>
-      <property name="text">
-       <string>13</string>
-      </property>
-     </row>
-     <row>
-      <property name="text">
-       <string>14</string>
-      </property>
-     </row>
-     <row>
-      <property name="text">
-       <string>15</string>
-      </property>
-     </row>
-     <row>
-      <property name="text">
-       <string>16</string>
-      </property>
-     </row>
-     <row>
-      <property name="text">
-       <string>17</string>
-      </property>
-     </row>
-     <row>
-      <property name="text">
-       <string>20</string>
-      </property>
-     </row>
      <column>
       <property name="text">
        <string>Numero</string>
@@ -1539,8 +1499,8 @@
       <rect>
        <x>0</x>
        <y>0</y>
-       <width>324</width>
-       <height>581</height>
+       <width>305</width>
+       <height>580</height>
       </rect>
      </property>
      <property name="font">
@@ -1556,9 +1516,63 @@
      </property>
     </widget>
    </widget>
+   <widget class="QFrame" name="ajuste">
+    <property name="geometry">
+     <rect>
+      <x>1070</x>
+      <y>241</y>
+      <width>21</width>
+      <height>580</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+   </widget>
+   <widget class="Line" name="line_vertical">
+    <property name="geometry">
+     <rect>
+      <x>1071</x>
+      <y>5</y>
+      <width>20</width>
+      <height>810</height>
+     </rect>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Sunken</enum>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Vertical</enum>
+    </property>
+   </widget>
+   <widget class="Line" name="line_horizontal">
+    <property name="geometry">
+     <rect>
+      <x>1090</x>
+      <y>213</y>
+      <width>310</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Sunken</enum>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
    <zorder>results_container</zorder>
    <zorder>image_container</zorder>
    <zorder>lista_container</zorder>
+   <zorder>ajuste</zorder>
+   <zorder>line_vertical</zorder>
+   <zorder>line_horizontal</zorder>
   </widget>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">
