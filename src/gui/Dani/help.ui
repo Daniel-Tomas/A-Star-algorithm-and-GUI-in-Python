@@ -6,9 +6,21 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>573</width>
-    <height>457</height>
+    <width>467</width>
+    <height>327</height>
    </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>467</width>
+    <height>327</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>467</width>
+    <height>327</height>
+   </size>
   </property>
   <property name="font">
    <font>
@@ -26,15 +38,34 @@
    <widget class="QWidget" name="verticalLayoutWidget">
     <property name="geometry">
      <rect>
-      <x>60</x>
-      <y>20</y>
-      <width>501</width>
-      <height>381</height>
+      <x>38</x>
+      <y>19</y>
+      <width>381</width>
+      <height>271</height>
      </rect>
     </property>
     <layout class="QVBoxLayout" name="pasos">
      <item>
-      <widget class="QLabel" name="HelpWindow">
+      <widget class="QLabel" name="grupo">
+       <property name="font">
+        <font>
+         <family>Trebuchet MS</family>
+         <pointsize>26</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>Pasos:</string>
+       </property>
+       <property name="textFormat">
+        <enum>Qt::AutoText</enum>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="aaron">
        <property name="font">
         <font>
          <family>Trebuchet MS</family>
@@ -42,119 +73,59 @@
         </font>
        </property>
        <property name="text">
-        <string>Pasos:</string>
+        <string>1. Seleccione Origen</string>
        </property>
       </widget>
      </item>
      <item>
-      <layout class="QVBoxLayout" name="verticalLayout">
-       <item>
-        <widget class="QLabel" name="paso_1">
-         <property name="font">
-          <font>
-           <family>Trebuchet MS</family>
-           <pointsize>22</pointsize>
-          </font>
-         </property>
-         <property name="text">
-          <string>1. Aaron compila</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QLabel" name="paso_2">
-         <property name="font">
-          <font>
-           <family>Trebuchet MS</family>
-           <pointsize>22</pointsize>
-          </font>
-         </property>
-         <property name="text">
-          <string>2. Aaron ejecuta</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QLabel" name="paso_3">
-         <property name="font">
-          <font>
-           <family>Trebuchet MS</family>
-           <pointsize>22</pointsize>
-          </font>
-         </property>
-         <property name="text">
-          <string>3. Aaron la lia</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QLabel" name="paso_4">
-         <property name="font">
-          <font>
-           <family>Trebuchet MS</family>
-           <pointsize>22</pointsize>
-          </font>
-         </property>
-         <property name="text">
-          <string>4. Aaron hace push</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QLabel" name="paso_5">
-         <property name="font">
-          <font>
-           <family>Trebuchet MS</family>
-           <pointsize>22</pointsize>
-          </font>
-         </property>
-         <property name="text">
-          <string>5. Aaron la lia en git</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QLabel" name="paso_6">
-         <property name="font">
-          <font>
-           <family>Trebuchet MS</family>
-           <pointsize>22</pointsize>
-          </font>
-         </property>
-         <property name="text">
-          <string>6. Aaron lia el proyecyo</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QLabel" name="paso_7">
-         <property name="font">
-          <font>
-           <family>Trebuchet MS</family>
-           <pointsize>22</pointsize>
-          </font>
-         </property>
-         <property name="text">
-          <string>7. Aaron es un liante</string>
-         </property>
-        </widget>
-       </item>
-      </layout>
+      <widget class="QLabel" name="aaron_2">
+       <property name="font">
+        <font>
+         <family>Trebuchet MS</family>
+         <pointsize>22</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>2. Seleccione Destino</string>
+       </property>
+      </widget>
      </item>
     </layout>
    </widget>
+   <widget class="QFrame" name="fondo">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>571</width>
+      <height>441</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>571</width>
+      <height>441</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>571</width>
+      <height>441</height>
+     </size>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+   </widget>
+   <zorder>fondo</zorder>
+   <zorder>verticalLayoutWidget</zorder>
   </widget>
-  <widget class="QMenuBar" name="menubar">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>573</width>
-     <height>21</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QStatusBar" name="statusbar"/>
  </widget>
  <resources/>
  <connections/>
