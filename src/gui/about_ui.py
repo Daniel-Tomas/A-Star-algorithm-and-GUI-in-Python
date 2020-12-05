@@ -1,12 +1,6 @@
-# -*- coding: utf-8 -*-
-
-# Form implementation generated from reading ui file 'about.ui'
-#
-# Created by: PyQt5 UI code generator 5.9.2
-#
-# WARNING! All changes made in this file will be lost!
-
+import os
 from PyQt5 import QtCore, QtGui, QtWidgets
+
 
 class Ui_AboutWindow(object):
     def setupUi(self, AboutWindow):
@@ -23,7 +17,8 @@ class Ui_AboutWindow(object):
         font.setFamily("Trebuchet MS")
         AboutWindow.setFont(font)
         icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap("../../../image/1200px-Athens_Metro_Logo.svg.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon.addPixmap(QtGui.QPixmap(os.path.join(os.path.dirname(__file__), "../../image/route_icon_image.png")),
+                       QtGui.QIcon.Normal, QtGui.QIcon.Off)
         AboutWindow.setWindowIcon(icon)
         self.centralwidget = QtWidgets.QWidget(AboutWindow)
         font = QtGui.QFont()
@@ -105,10 +100,10 @@ class Ui_AboutWindow(object):
 
 if __name__ == "__main__":
     import sys
+
     app = QtWidgets.QApplication(sys.argv)
     AboutWindow = QtWidgets.QMainWindow()
     ui = Ui_AboutWindow()
     ui.setupUi(AboutWindow)
     AboutWindow.show()
     sys.exit(app.exec_())
-

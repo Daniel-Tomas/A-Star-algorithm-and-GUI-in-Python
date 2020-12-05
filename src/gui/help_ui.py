@@ -1,12 +1,6 @@
-# -*- coding: utf-8 -*-
-
-# Form implementation generated from reading ui file 'help.ui'
-#
-# Created by: PyQt5 UI code generator 5.9.2
-#
-# WARNING! All changes made in this file will be lost!
-
+import os
 from PyQt5 import QtCore, QtGui, QtWidgets
+
 
 class Ui_Help_Window(object):
     def setupUi(self, Help_Window):
@@ -18,7 +12,9 @@ class Ui_Help_Window(object):
         font.setFamily("Trebuchet MS")
         Help_Window.setFont(font)
         icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap("../../../image/1200px-Athens_Metro_Logo.svg.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon.addPixmap(
+            QtGui.QPixmap(os.path.join(os.path.dirname(__file__), "../../image/1200px-Athens_Metro_Logo.svg.png")),
+            QtGui.QIcon.Normal, QtGui.QIcon.Off)
         Help_Window.setWindowIcon(icon)
         self.centralwidget = QtWidgets.QWidget(Help_Window)
         self.centralwidget.setObjectName("centralwidget")
@@ -34,7 +30,7 @@ class Ui_Help_Window(object):
         font.setPointSize(26)
         self.grupo.setFont(font)
         self.grupo.setTextFormat(QtCore.Qt.AutoText)
-        self.grupo.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
+        self.grupo.setAlignment(QtCore.Qt.AlignLeading | QtCore.Qt.AlignLeft | QtCore.Qt.AlignVCenter)
         self.grupo.setObjectName("grupo")
         self.pasos.addWidget(self.grupo)
         self.aaron = QtWidgets.QLabel(self.verticalLayoutWidget)
@@ -76,10 +72,10 @@ class Ui_Help_Window(object):
 
 if __name__ == "__main__":
     import sys
+
     app = QtWidgets.QApplication(sys.argv)
     Help_Window = QtWidgets.QMainWindow()
     ui = Ui_Help_Window()
     ui.setupUi(Help_Window)
     Help_Window.show()
     sys.exit(app.exec_())
-
