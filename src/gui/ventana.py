@@ -1,7 +1,7 @@
 from PyQt5 import QtWidgets, QtGui
 from gui.ventana_ui import Ui_MainWindow
 from gui import about_ui, help_ui
-from search import Search
+from search import AStar
 import os
 
 
@@ -79,7 +79,7 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         destiny = self.destiny_comboBox.currentText()
         if origin != self.predetermined_text_origin_comboBox \
                 and destiny != self.predetermined_text_destiny_comboBox:
-            functionality = Search()
+            functionality = AStar()
             came_from = functionality.algorithm_astar(origin, destiny)
             path = functionality.obtain_path(came_from, origin, destiny)
 

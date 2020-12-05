@@ -2,8 +2,8 @@ import math
 import os
 from queue import PriorityQueue
 
-class Search:
 
+class AStar:
     def __init__(self):
         self.coordinates = {}
         self.comunications = {}
@@ -107,7 +107,7 @@ class Search:
 
 
 if __name__ == '__main__':
-    path = Search()
+    path = AStar()
     print(path.comunications)
     print(path.coordinates)
     origen = 'Airport'
