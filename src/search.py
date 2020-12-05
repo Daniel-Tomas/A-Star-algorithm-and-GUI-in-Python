@@ -109,8 +109,10 @@ class Search:
 
 if __name__ == '__main__':
     path = Search()
-    origen = 'Evangelismos'
-    destino = 'KAT'
+    print(path.comunications)
+    print(path.coordinates)
+    origen = 'Airport'
+    destino = 'Katehaki'
     came_from = path.algorithm_astar(origen, destino)
     camino = path.obtain_path(came_from, origen, destino)
     velocidad = 82.5
