@@ -17,8 +17,9 @@ class Ui_AboutWindow(object):
         font.setFamily("Trebuchet MS")
         AboutWindow.setFont(font)
         icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap(os.path.join(os.path.dirname(__file__), "../../image/route_icon_image.png")),
-                       QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon.addPixmap(
+            QtGui.QPixmap(os.path.join(os.path.dirname(__file__), "../../image/1200px-Athens_Metro_Logo.svg.png")),
+            QtGui.QIcon.Normal, QtGui.QIcon.Off)
         AboutWindow.setWindowIcon(icon)
         self.centralwidget = QtWidgets.QWidget(AboutWindow)
         font = QtGui.QFont()
