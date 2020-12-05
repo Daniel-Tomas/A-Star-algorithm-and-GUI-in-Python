@@ -1,6 +1,7 @@
-from src.gui.ventana_ui import *
-from src.search import Search
-from src.gui import about_ui, help_ui
+from PyQt5 import QtWidgets, QtGui
+from gui.ventana_ui import Ui_MainWindow
+from gui import about_ui, help_ui
+from search import Search
 import os
 
 
@@ -152,10 +153,3 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         self.time_value.setText(f'{minutes} min. {seconds} s.')
         self.stations_value.setText(str(stations_number))
         self.distances_value.setText(f'{distance:.2f} Km')
-
-
-if __name__ == "__main__":
-    app = QtWidgets.QApplication([])
-    window = MainWindow()
-    window.show()
-    app.exec_()

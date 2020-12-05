@@ -39,7 +39,7 @@
   </property>
   <property name="windowIcon">
    <iconset>
-    <normaloff>../../../image/1200px-Athens_Metro_Logo.svg.png</normaloff>../../../image/1200px-Athens_Metro_Logo.svg.png</iconset>
+    <normaloff>../../image/1200px-Athens_Metro_Logo.svg.png</normaloff>../../image/1200px-Athens_Metro_Logo.svg.png</iconset>
   </property>
   <widget class="QWidget" name="centralwidget">
    <property name="enabled">
@@ -94,7 +94,7 @@
       <string/>
      </property>
      <property name="pixmap">
-      <pixmap>../../../image/mapa_metro_atenasCHULO.jpg</pixmap>
+      <pixmap>../../image/mapa_metro_atenasCHULO.jpg</pixmap>
      </property>
      <property name="scaledContents">
       <bool>true</bool>
@@ -171,7 +171,7 @@
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap>../../../image/flag-color.png</pixmap>
+       <pixmap>../../image/flag-color.png</pixmap>
       </property>
       <property name="scaledContents">
        <bool>true</bool>
@@ -193,7 +193,7 @@
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap>../../../image/mapa-color.png</pixmap>
+       <pixmap>../../image/mapa-color.png</pixmap>
       </property>
       <property name="scaledContents">
        <bool>true</bool>
@@ -205,7 +205,7 @@
       <rect>
        <x>-61</x>
        <y>4</y>
-       <width>891</width>
+       <width>1131</width>
        <height>791</height>
       </rect>
      </property>
@@ -228,7 +228,7 @@
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap>../../../image/route_icon_image.png</pixmap>
+       <pixmap>../../image/route_icon_image.png</pixmap>
       </property>
       <property name="scaledContents">
        <bool>true</bool>
@@ -247,7 +247,7 @@
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap>../../../image/route_icon_image.png</pixmap>
+       <pixmap>../../image/route_icon_image.png</pixmap>
       </property>
       <property name="scaledContents">
        <bool>true</bool>
@@ -266,7 +266,7 @@
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap>../../../image/route_icon_image.png</pixmap>
+       <pixmap>../../image/route_icon_image.png</pixmap>
       </property>
       <property name="scaledContents">
        <bool>true</bool>
@@ -285,7 +285,7 @@
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap>../../../image/route_icon_image.png</pixmap>
+       <pixmap>../../image/route_icon_image.png</pixmap>
       </property>
       <property name="scaledContents">
        <bool>true</bool>
@@ -304,7 +304,7 @@
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap>../../../image/route_icon_image.png</pixmap>
+       <pixmap>../../image/route_icon_image.png</pixmap>
       </property>
       <property name="scaledContents">
        <bool>true</bool>
@@ -323,7 +323,7 @@
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap>../../../image/route_icon_image.png</pixmap>
+       <pixmap>../../image/route_icon_image.png</pixmap>
       </property>
       <property name="scaledContents">
        <bool>true</bool>
@@ -342,7 +342,7 @@
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap>../../../image/route_icon_image.png</pixmap>
+       <pixmap>../../image/route_icon_image.png</pixmap>
       </property>
       <property name="scaledContents">
        <bool>true</bool>
@@ -361,7 +361,7 @@
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap>../../../image/route_icon_image.png</pixmap>
+       <pixmap>../../image/route_icon_image.png</pixmap>
       </property>
       <property name="scaledContents">
        <bool>true</bool>
@@ -380,7 +380,7 @@
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap>../../../image/route_icon_image.png</pixmap>
+       <pixmap>../../image/route_icon_image.png</pixmap>
       </property>
       <property name="scaledContents">
        <bool>true</bool>
@@ -399,7 +399,7 @@
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap>../../../image/route_icon_image.png</pixmap>
+       <pixmap>../../image/route_icon_image.png</pixmap>
       </property>
       <property name="scaledContents">
        <bool>true</bool>
@@ -418,7 +418,7 @@
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap>../../../image/route_icon_image.png</pixmap>
+       <pixmap>../../image/route_icon_image.png</pixmap>
       </property>
       <property name="scaledContents">
        <bool>true</bool>
@@ -437,7 +437,7 @@
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap>../../../image/route_icon_image.png</pixmap>
+       <pixmap>../../image/route_icon_image.png</pixmap>
       </property>
       <property name="scaledContents">
        <bool>true</bool>
@@ -456,7 +456,7 @@
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap>../../../image/route_icon_image.png</pixmap>
+       <pixmap>../../image/route_icon_image.png</pixmap>
       </property>
       <property name="scaledContents">
        <bool>true</bool>
@@ -475,7 +475,7 @@
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap>../../../image/route_icon_image.png</pixmap>
+       <pixmap>../../image/route_icon_image.png</pixmap>
       </property>
       <property name="scaledContents">
        <bool>true</bool>
@@ -494,7 +494,7 @@
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap>../../../image/route_icon_image.png</pixmap>
+       <pixmap>../../image/route_icon_image.png</pixmap>
       </property>
       <property name="scaledContents">
        <bool>true</bool>
@@ -513,7 +513,7 @@
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap>../../../image/route_icon_image.png</pixmap>
+       <pixmap>../../image/route_icon_image.png</pixmap>
       </property>
       <property name="scaledContents">
        <bool>true</bool>
@@ -532,7 +532,7 @@
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap>../../../image/route_icon_image.png</pixmap>
+       <pixmap>../../image/route_icon_image.png</pixmap>
       </property>
       <property name="scaledContents">
        <bool>true</bool>
@@ -551,7 +551,7 @@
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap>../../../image/route_icon_image.png</pixmap>
+       <pixmap>../../image/route_icon_image.png</pixmap>
       </property>
       <property name="scaledContents">
        <bool>true</bool>
@@ -570,7 +570,7 @@
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap>../../../image/route_icon_image.png</pixmap>
+       <pixmap>../../image/route_icon_image.png</pixmap>
       </property>
       <property name="scaledContents">
        <bool>true</bool>
@@ -589,7 +589,7 @@
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap>../../../image/route_icon_image.png</pixmap>
+       <pixmap>../../image/route_icon_image.png</pixmap>
       </property>
       <property name="scaledContents">
        <bool>true</bool>
@@ -608,7 +608,7 @@
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap>../../../image/route_icon_image.png</pixmap>
+       <pixmap>../../image/route_icon_image.png</pixmap>
       </property>
       <property name="scaledContents">
        <bool>true</bool>
@@ -627,7 +627,7 @@
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap>../../../image/route_icon_image.png</pixmap>
+       <pixmap>../../image/route_icon_image.png</pixmap>
       </property>
       <property name="scaledContents">
        <bool>true</bool>
@@ -646,7 +646,7 @@
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap>../../../image/route_icon_image.png</pixmap>
+       <pixmap>../../image/route_icon_image.png</pixmap>
       </property>
       <property name="scaledContents">
        <bool>true</bool>
@@ -665,7 +665,7 @@
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap>../../../image/route_icon_image.png</pixmap>
+       <pixmap>../../image/route_icon_image.png</pixmap>
       </property>
       <property name="scaledContents">
        <bool>true</bool>
@@ -684,7 +684,7 @@
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap>../../../image/route_icon_image.png</pixmap>
+       <pixmap>../../image/route_icon_image.png</pixmap>
       </property>
       <property name="scaledContents">
        <bool>true</bool>
@@ -703,7 +703,7 @@
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap>../../../image/route_icon_image.png</pixmap>
+       <pixmap>../../image/route_icon_image.png</pixmap>
       </property>
       <property name="scaledContents">
        <bool>true</bool>
@@ -722,7 +722,7 @@
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap>../../../image/route_icon_image.png</pixmap>
+       <pixmap>../../image/route_icon_image.png</pixmap>
       </property>
       <property name="scaledContents">
        <bool>true</bool>
@@ -741,7 +741,7 @@
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap>../../../image/route_icon_image.png</pixmap>
+       <pixmap>../../image/route_icon_image.png</pixmap>
       </property>
       <property name="scaledContents">
        <bool>true</bool>
@@ -760,7 +760,7 @@
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap>../../../image/route_icon_image.png</pixmap>
+       <pixmap>../../image/route_icon_image.png</pixmap>
       </property>
       <property name="scaledContents">
        <bool>true</bool>
@@ -779,7 +779,7 @@
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap>../../../image/route_icon_image.png</pixmap>
+       <pixmap>../../image/route_icon_image.png</pixmap>
       </property>
       <property name="scaledContents">
        <bool>true</bool>
@@ -798,7 +798,7 @@
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap>../../../image/route_icon_image.png</pixmap>
+       <pixmap>../../image/route_icon_image.png</pixmap>
       </property>
       <property name="scaledContents">
        <bool>true</bool>
@@ -817,7 +817,7 @@
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap>../../../image/route_icon_image.png</pixmap>
+       <pixmap>../../image/route_icon_image.png</pixmap>
       </property>
       <property name="scaledContents">
        <bool>true</bool>
@@ -836,7 +836,7 @@
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap>../../../image/route_icon_image.png</pixmap>
+       <pixmap>../../image/route_icon_image.png</pixmap>
       </property>
       <property name="scaledContents">
        <bool>true</bool>
@@ -855,7 +855,7 @@
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap>../../../image/route_icon_image.png</pixmap>
+       <pixmap>../../image/route_icon_image.png</pixmap>
       </property>
       <property name="scaledContents">
        <bool>true</bool>
@@ -874,7 +874,7 @@
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap>../../../image/route_icon_image.png</pixmap>
+       <pixmap>../../image/route_icon_image.png</pixmap>
       </property>
       <property name="scaledContents">
        <bool>true</bool>
@@ -893,7 +893,7 @@
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap>../../../image/route_icon_image.png</pixmap>
+       <pixmap>../../image/route_icon_image.png</pixmap>
       </property>
       <property name="scaledContents">
        <bool>true</bool>
@@ -912,7 +912,7 @@
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap>../../../image/route_icon_image.png</pixmap>
+       <pixmap>../../image/route_icon_image.png</pixmap>
       </property>
       <property name="scaledContents">
        <bool>true</bool>
@@ -931,7 +931,7 @@
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap>../../../image/route_icon_image.png</pixmap>
+       <pixmap>../../image/route_icon_image.png</pixmap>
       </property>
       <property name="scaledContents">
        <bool>true</bool>
@@ -950,7 +950,7 @@
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap>../../../image/route_icon_image.png</pixmap>
+       <pixmap>../../image/route_icon_image.png</pixmap>
       </property>
       <property name="scaledContents">
        <bool>true</bool>
@@ -969,7 +969,7 @@
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap>../../../image/route_icon_image.png</pixmap>
+       <pixmap>../../image/route_icon_image.png</pixmap>
       </property>
       <property name="scaledContents">
        <bool>true</bool>
@@ -988,7 +988,7 @@
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap>../../../image/route_icon_image.png</pixmap>
+       <pixmap>../../image/route_icon_image.png</pixmap>
       </property>
       <property name="scaledContents">
        <bool>true</bool>
@@ -1007,7 +1007,7 @@
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap>../../../image/route_icon_image.png</pixmap>
+       <pixmap>../../image/route_icon_image.png</pixmap>
       </property>
       <property name="scaledContents">
        <bool>true</bool>
@@ -1026,7 +1026,7 @@
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap>../../../image/route_icon_image.png</pixmap>
+       <pixmap>../../image/route_icon_image.png</pixmap>
       </property>
       <property name="scaledContents">
        <bool>true</bool>
@@ -1045,7 +1045,7 @@
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap>../../../image/route_icon_image.png</pixmap>
+       <pixmap>../../image/route_icon_image.png</pixmap>
       </property>
       <property name="scaledContents">
        <bool>true</bool>
@@ -1064,7 +1064,7 @@
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap>../../../image/route_icon_image.png</pixmap>
+       <pixmap>../../image/route_icon_image.png</pixmap>
       </property>
       <property name="scaledContents">
        <bool>true</bool>
@@ -1083,7 +1083,7 @@
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap>../../../image/route_icon_image.png</pixmap>
+       <pixmap>../../image/route_icon_image.png</pixmap>
       </property>
       <property name="scaledContents">
        <bool>true</bool>
@@ -1102,7 +1102,7 @@
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap>../../../image/route_icon_image.png</pixmap>
+       <pixmap>../../image/route_icon_image.png</pixmap>
       </property>
       <property name="scaledContents">
        <bool>true</bool>
@@ -1121,7 +1121,7 @@
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap>../../../image/route_icon_image.png</pixmap>
+       <pixmap>../../image/route_icon_image.png</pixmap>
       </property>
       <property name="scaledContents">
        <bool>true</bool>
@@ -1140,7 +1140,7 @@
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap>../../../image/route_icon_image.png</pixmap>
+       <pixmap>../../image/route_icon_image.png</pixmap>
       </property>
       <property name="scaledContents">
        <bool>true</bool>
@@ -1159,7 +1159,7 @@
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap>../../../image/route_icon_image.png</pixmap>
+       <pixmap>../../image/route_icon_image.png</pixmap>
       </property>
       <property name="scaledContents">
        <bool>true</bool>
@@ -1178,12 +1178,63 @@
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap>../../../image/route_icon_image.png</pixmap>
+       <pixmap>../../image/route_icon_image.png</pixmap>
       </property>
       <property name="scaledContents">
        <bool>true</bool>
       </property>
      </widget>
+     <zorder>i_Victoria</zorder>
+     <zorder>i_Tavros</zorder>
+     <zorder>i_Metaxourghio</zorder>
+     <zorder>i_Syngrou_Fix</zorder>
+     <zorder>i_Akropoli</zorder>
+     <zorder>i_Aghios_Antonios</zorder>
+     <zorder>i_Halandri</zorder>
+     <zorder>i_Aghios_Nikolaos</zorder>
+     <zorder>i_Thissio</zorder>
+     <zorder>i_KAT</zorder>
+     <zorder>i_Kallithea</zorder>
+     <zorder>i_Sepolia</zorder>
+     <zorder>i_Ano_Patissia</zorder>
+     <zorder>i_Doukissis_Plakentias</zorder>
+     <zorder>i_Neos_Kosmos</zorder>
+     <zorder>i_Iraklio</zorder>
+     <zorder>i_Monastiraki</zorder>
+     <zorder>i_Perissos</zorder>
+     <zorder>i_Panepistimio</zorder>
+     <zorder>i_Aghios_Eleftherios</zorder>
+     <zorder>i_Pefkakia</zorder>
+     <zorder>i_Irini</zorder>
+     <zorder>i_Pallini</zorder>
+     <zorder>i_Ethniki_Amyna</zorder>
+     <zorder>i_Panormou</zorder>
+     <zorder>i_Egaleo</zorder>
+     <zorder>i_Attiki</zorder>
+     <zorder>i_Dafni</zorder>
+     <zorder>i_Larissa_Station</zorder>
+     <zorder>i_Evangelismos</zorder>
+     <zorder>i_Katehaki</zorder>
+     <zorder>i_Omonia</zorder>
+     <zorder>i_Kerameikos</zorder>
+     <zorder>i_Syntagma</zorder>
+     <zorder>i_Maroussi</zorder>
+     <zorder>i_Nea_Ionia</zorder>
+     <zorder>i_Kato_Patissia</zorder>
+     <zorder>i_Petralona</zorder>
+     <zorder>i_Piraeus</zorder>
+     <zorder>i_Eleonas</zorder>
+     <zorder>i_Ambelokipi</zorder>
+     <zorder>i_Aghios_Ioannis</zorder>
+     <zorder>i_Megaro_Moussikis</zorder>
+     <zorder>i_Faliro</zorder>
+     <zorder>i_Kifissia</zorder>
+     <zorder>i_Neratziotissa</zorder>
+     <zorder>i_Moschato</zorder>
+     <zorder>i_Aghios_Dimitrios</zorder>
+     <zorder>i_Paiania_Kantza</zorder>
+     <zorder>i_Airport</zorder>
+     <zorder>i_Koropi</zorder>
     </widget>
     <widget class="QLabel" name="Metro_Atenas">
      <property name="geometry">

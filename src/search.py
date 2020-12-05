@@ -2,7 +2,6 @@ import math
 import os
 from queue import PriorityQueue
 
-
 class Search:
 
     def __init__(self):
