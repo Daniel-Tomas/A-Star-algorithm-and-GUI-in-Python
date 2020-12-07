@@ -90,7 +90,7 @@ class Ui_AboutWindow(object):
 
     def retranslateUi(self, AboutWindow):
         _translate = QtCore.QCoreApplication.translate
-        AboutWindow.setWindowTitle(_translate("AboutWindow", "About"))
+        AboutWindow.setWindowTitle(_translate("AboutWindow", "Sobre nosotros"))
         self.grupo.setText(_translate("AboutWindow", "Grupo 57"))
         self.aaron.setText(_translate("AboutWindow", "Aarón Cabero Blanco"))
         self.sergio.setText(_translate("AboutWindow", "Sergio Sánchez-Carvajales Francoy"))

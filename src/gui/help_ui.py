@@ -64,7 +64,7 @@ class Ui_Help_Window(object):
 
     def retranslateUi(self, Help_Window):
         _translate = QtCore.QCoreApplication.translate
-        Help_Window.setWindowTitle(_translate("Help_Window", "Help"))
+        Help_Window.setWindowTitle(_translate("Help_Window", "Ayuda"))
         self.grupo.setText(_translate("Help_Window", "Pasos:"))
         self.aaron.setText(_translate("Help_Window", "1. Seleccione Origen"))
         self.aaron_2.setText(_translate("Help_Window", "2. Seleccione Destino"))
