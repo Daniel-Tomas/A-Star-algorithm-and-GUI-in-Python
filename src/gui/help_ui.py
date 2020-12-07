@@ -1,5 +1,5 @@
-from PyQt5 import QtCore, QtGui, QtWidgets
 from util import resource_path
+from PyQt5 import QtCore, QtGui, QtWidgets
 
 
 class Ui_Help_Window(object):
@@ -13,8 +13,8 @@ class Ui_Help_Window(object):
         Help_Window.setFont(font)
         icon = QtGui.QIcon()
         icon.addPixmap(
-            QtGui.QPixmap(resource_path("image/1200px-Athens_Metro_Logo.svg.png"),
-            QtGui.QIcon.Normal, QtGui.QIcon.Off))
+            QtGui.QPixmap(resource_path("image/1200px-Athens_Metro_Logo.svg.png")),
+            QtGui.QIcon.Normal, QtGui.QIcon.Off)
         Help_Window.setWindowIcon(icon)
         self.centralwidget = QtWidgets.QWidget(Help_Window)
         self.centralwidget.setObjectName("centralwidget")
@@ -64,7 +64,7 @@ class Ui_Help_Window(object):
 
     def retranslateUi(self, Help_Window):
         _translate = QtCore.QCoreApplication.translate
-        Help_Window.setWindowTitle(_translate("Help_Window", "Help"))
+        Help_Window.setWindowTitle(_translate("Help_Window", "Ayuda"))
         self.grupo.setText(_translate("Help_Window", "Pasos:"))
         self.aaron.setText(_translate("Help_Window", "1. Seleccione Origen"))
         self.aaron_2.setText(_translate("Help_Window", "2. Seleccione Destino"))
