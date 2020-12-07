@@ -1,5 +1,5 @@
-import os
 from PyQt5 import QtCore, QtGui, QtWidgets
+from util import resource_path
 
 
 class Ui_AboutWindow(object):
@@ -18,8 +18,8 @@ class Ui_AboutWindow(object):
         AboutWindow.setFont(font)
         icon = QtGui.QIcon()
         icon.addPixmap(
-            QtGui.QPixmap(os.path.join(os.path.dirname(__file__), "../../image/1200px-Athens_Metro_Logo.svg.png")),
-            QtGui.QIcon.Normal, QtGui.QIcon.Off)
+            QtGui.QPixmap(resource_path("image/1200px-Athens_Metro_Logo.svg.png"),
+            QtGui.QIcon.Normal, QtGui.QIcon.Off))
         AboutWindow.setWindowIcon(icon)
         self.centralwidget = QtWidgets.QWidget(AboutWindow)
         font = QtGui.QFont()

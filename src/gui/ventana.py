@@ -1,8 +1,8 @@
 from PyQt5 import QtWidgets, QtGui
 from gui.ventana_ui import Ui_MainWindow
 from gui import about_ui, help_ui
+from util import resource_path
 from search import AStar
-import os
 
 
 class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
@@ -35,16 +35,16 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         icon_circle_blue = QtGui.QIcon()
         icon_circle_yellow = QtGui.QIcon()
 
-        icon_circle_red.addPixmap(QtGui.QPixmap(os.path.join(os.path.dirname(__file__), "../../image/circle_red.png")),
+        icon_circle_red.addPixmap(QtGui.QPixmap(resource_path("image/circle_red.png")),
                                   QtGui.QIcon.Normal, QtGui.QIcon.Off)
         icon_circle_green.addPixmap(
-            QtGui.QPixmap(os.path.join(os.path.dirname(__file__), "../../image/circle_green.png")), QtGui.QIcon.Normal,
+            QtGui.QPixmap(resource_path("image/circle_green.png")), QtGui.QIcon.Normal,
             QtGui.QIcon.Off)
         icon_circle_blue.addPixmap(
-            QtGui.QPixmap(os.path.join(os.path.dirname(__file__), "../../image/circle_blue.png")), QtGui.QIcon.Normal,
+            QtGui.QPixmap(resource_path("image/circle_blue.png")), QtGui.QIcon.Normal,
             QtGui.QIcon.Off)
         icon_circle_yellow.addPixmap(
-            QtGui.QPixmap(os.path.join(os.path.dirname(__file__), "../../image/circle_yellow.png")), QtGui.QIcon.Normal,
+            QtGui.QPixmap(resource_path("image/circle_yellow.png")), QtGui.QIcon.Normal,
             QtGui.QIcon.Off)
 
         self.origin_comboBox.setToolTip("Origen")
@@ -53,7 +53,7 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         self.origin_comboBox.addItem(self.predetermined_text_origin_comboBox)
         self.destiny_comboBox.addItem(self.predetermined_text_destiny_comboBox)
 
-        with open(os.path.join(os.path.dirname(__file__), '../../data/coordenadas')) as file:
+        with open(resource_path("data/coordenadas")) as file:
             for linea in file:
                 palabras = linea.split(",")
                 estacion = palabras[0]
