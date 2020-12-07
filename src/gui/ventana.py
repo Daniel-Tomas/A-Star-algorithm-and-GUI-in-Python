@@ -20,8 +20,8 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         self.make_stations_invisible()
 
         # Menu bar
-        self.menu_help = QtWidgets.QAction("Help")
-        self.menu_about = QtWidgets.QAction("About us")
+        self.menu_help = QtWidgets.QAction("Ayuda")
+        self.menu_about = QtWidgets.QAction("Sobre nosotros")
 
         self.menuBar.addAction(self.menu_help)
         self.menuBar.addAction(self.menu_about)
