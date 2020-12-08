@@ -1,5 +1,5 @@
 import math
-import os
+from util import resource_path
 from queue import PriorityQueue
 
 
@@ -7,8 +7,8 @@ class AStar:
     def __init__(self):
         self.coordinates = {}
         self.comunications = {}
-        self.read_distances(os.path.join(os.path.dirname(__file__), '../data/distancias'))
-        self.read_coordinates(os.path.join(os.path.dirname(__file__), '../data/coordenadas'))
+        self.read_distances(resource_path("data/distancias"))
+        self.read_coordinates(resource_path("data/coordenadas"))
 
     def read_distances(self, file):
         f = open(file, 'r')

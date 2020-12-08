@@ -1,4 +1,4 @@
-import os
+from util import resource_path
 from PyQt5 import QtCore, QtGui, QtWidgets
 
 
@@ -13,7 +13,7 @@ class Ui_Help_Window(object):
         Help_Window.setFont(font)
         icon = QtGui.QIcon()
         icon.addPixmap(
-            QtGui.QPixmap(os.path.join(os.path.dirname(__file__), "../../image/1200px-Athens_Metro_Logo.svg.png")),
+            QtGui.QPixmap(resource_path("image/1200px-Athens_Metro_Logo.svg.png")),
             QtGui.QIcon.Normal, QtGui.QIcon.Off)
         Help_Window.setWindowIcon(icon)
         self.centralwidget = QtWidgets.QWidget(Help_Window)
